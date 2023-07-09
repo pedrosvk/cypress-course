@@ -1,4 +1,4 @@
-import { Main } from "../../cypress/pages/Main";
+import { Main } from '../../cypress/pages/Main';
 
 class Profile extends Main {}
 

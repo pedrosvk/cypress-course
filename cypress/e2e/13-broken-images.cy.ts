@@ -1,19 +1,19 @@
 let img: HTMLImageElement;
-describe("Broken images with Demo QA", () => {
+describe('Broken images with Demo QA', () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env("demoQA")}/broken`);
+    cy.visit(`${Cypress.env('demoQA')}/broken`);
   });
-  it("Not Broken Image Assertion", () => {
+  it('Not Broken Image Assertion', () => {
     cy.get('div > img[src="/images/Toolsqa.jpg"]')
-      .should("be.visible")
+      .should('be.visible')
       .and(($img) => {
         img = $img[0] as unknown as HTMLImageElement;
         expect(img.naturalWidth).to.be.greaterThan(0);
       });
   });
-  it("Broken Image Assertion", () => {
+  it('Broken Image Assertion', () => {
     cy.get('div > img[src="/images/Toolsqa_1.jpg"]')
-      .should("be.visible")
+      .should('be.visible')
       .and(($img) => {
         img = $img[0] as unknown as HTMLImageElement;
         expect(img.naturalWidth).to.be.greaterThan(0);
@@ -21,15 +21,15 @@ describe("Broken images with Demo QA", () => {
   });
 });
 
-describe.only("Broken image - Backup demo", () => {
+describe.only('Broken image - Backup demo', () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env("theInternet")}/broken_images`);
+    cy.visit(`${Cypress.env('theInternet')}/broken_images`);
   });
 
-  it("Broken Image Detected(first)", () => {
-    cy.get("div.example img")
+  it('Broken Image Detected(first)', () => {
+    cy.get('div.example img')
       .first()
-      .should("be.visible")
+      .should('be.visible')
       .and(($img) => {
         //Skip the TS Error, it is working.
         img = $img[0] as unknown as HTMLImageElement | null;
@@ -37,10 +37,10 @@ describe.only("Broken image - Backup demo", () => {
       });
   });
 
-  it("Broken Image Detected(last)", () => {
-    cy.get("div.example img")
+  it('Broken Image Detected(last)', () => {
+    cy.get('div.example img')
       .last()
-      .should("be.visible")
+      .should('be.visible')
       .and(($img) => {
         //Skip the TS Error, it is working.
         img = $img[0] as unknown as HTMLImageElement | null;

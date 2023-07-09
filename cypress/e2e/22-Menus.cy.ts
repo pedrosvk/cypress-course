@@ -1,9 +1,9 @@
-describe("Menu describe", () => {
+describe('Menu describe', () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env("demoQA")}/menu`);
+    cy.visit(`${Cypress.env('demoQA')}/menu`);
   });
-  it("Menu Demo", () => {
-    cy.get("a").contains("Main Item 2").realHover();
-    cy.contains("a", "SUB SUB LIST »").realHover();
+  it('Menu Demo', () => {
+    cy.get('a').contains('Main Item 2').realHover();
+    cy.contains('a', 'SUB SUB LIST »').realHover();
   });
 });

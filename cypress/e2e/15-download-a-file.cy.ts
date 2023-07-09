@@ -1,9 +1,9 @@
-describe("Download a file in the QA Demo site", () => {
+describe('Download a file in the QA Demo site', () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env("demoQA")}/upload-download`);
+    cy.visit(`${Cypress.env('demoQA')}/upload-download`);
   });
-  it("Download the file", () => {
-    cy.get("a#downloadButton").click();
-    cy.verifyDownload("sampleFile.jpeg");
+  it('Download the file', () => {
+    cy.get('a#downloadButton').click();
+    cy.verifyDownload('sampleFile.jpeg'); // use plugin: cy verify downloads
   });
 });

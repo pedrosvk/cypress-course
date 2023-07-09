@@ -1,10 +1,10 @@
-import { Main } from "../../cypress/pages/Main";
+import { Main } from '../../cypress/pages/Main';
 
 class Login extends Main {
-  private username: string = "#userName";
-  private password: string = "#password";
-  private login: string = "#login";
-  private invalidLoginMessage: string = "#name";
+  private username: string = '#userName';
+  private password: string = '#password';
+  private login: string = '#login';
+  private invalidLoginMessage: string = '#name';
 
   get usernameElement(): Cypress.Chainable<JQuery<HTMLElement>> {
     return cy.get(this.username);
@@ -29,7 +29,7 @@ class Login extends Main {
   }
 
   visit(): void {
-    cy.visit(`${Cypress.env("demoQA")}/login`);
+    cy.visit(`${Cypress.env('demoQA')}/login`);
   }
 }
 

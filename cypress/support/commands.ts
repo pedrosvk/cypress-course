@@ -1,7 +1,7 @@
-import "cypress-file-upload";
-import "@testing-library/cypress/add-commands";
-import "@4tw/cypress-drag-drop";
-require("cy-verify-downloads").addCustomCommand();
+import 'cypress-file-upload';
+import '@testing-library/cypress/add-commands';
+import '@4tw/cypress-drag-drop';
+require('cy-verify-downloads').addCustomCommand();
 /// <reference types="cypress" />
 // ***********************************************
 // This example commands.ts shows you how to
@@ -39,18 +39,18 @@ declare global {
   }
 }
 
-Cypress.Commands.add("login", (username: string, password: string) => {
-  cy.get("#userName").type(username);
-  cy.get("#password").type(password);
-  cy.get("#login").click();
+Cypress.Commands.add('login', (username: string, password: string) => {
+  cy.get('#userName').type(username);
+  cy.get('#password').type(password);
+  cy.get('#login').click();
 });
 
-Cypress.Commands.add("safeLogin", (username: string, password: string) => {
-  cy.get("#userName").type(username);
-  cy.get("#password").type(password,{log: false});
-  cy.get("#login").click();
+Cypress.Commands.add('safeLogin', (username: string, password: string) => {
+  cy.get('#userName').type(username);
+  cy.get('#password').type(password, { log: false });
+  cy.get('#login').click();
 });
 
-Cypress.Commands.add("parseXlsx", (inputFile) => {
-  return cy.task("parseXlsx", { filePath: inputFile });
+Cypress.Commands.add('parseXlsx', (inputFile) => {
+  return cy.task('parseXlsx', { filePath: inputFile });
 });
